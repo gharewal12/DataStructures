@@ -3,6 +3,8 @@ using System.ComponentModel.DataAnnotations;
 
 Console.WriteLine("Hello, Welcome to Data Structures!");
 
+Console.WriteLine("--------------Arrays--------------");
+
 /* Arrays */
 #region
 var numbers = new ArrayDs<int>(4);
@@ -25,4 +27,21 @@ Console.WriteLine("Array 1");
 numbers.Reverse();
 numbers.InsertAt(5, 70);
 numbers.Print();
+#endregion
+
+Console.WriteLine("-----------Linked List------------");
+
+/* Linked Lists*/
+#region
+var ll = new LinkedListDs();
+ll.AddLast(10);
+ll.AddFirst(20);
+ll.AddFirst(30);
+ll.AddLast(40);
+ll.AddLast(50);
+ll.RemoveFirst();
+ll.RemoveLast();
+Console.WriteLine("Index of 10 is " + ll.IndexOf(10));
+Console.WriteLine("Contains 30 " + ll.Contains(30));
+ll.Print();
 #endregion

@@ -15,6 +15,7 @@
 
         private Node first;
         private Node last;
+        private int count;
 
         /// <summary>
         /// Add element at the end of linked list
@@ -31,6 +32,7 @@
                 last.next = node;
                 last = node;
             }
+            count++;
         }
 
         /// <summary>
@@ -47,6 +49,7 @@
                 node.next = first;
                 first = node;
             }
+            count++;
         }
 
         /// <summary>
@@ -88,6 +91,7 @@
                 throw new Exception("Empty Linked List");
             }
 
+            count--;
             //If list has only one element
             if (first == last) {
                 first = last = null;
@@ -107,6 +111,8 @@
             if (IsEmpty()) {
                 throw new Exception("Empty Linked List");
             }
+
+            count--;
             if (first == last) {
                 first = last = null;
                 return;
@@ -114,6 +120,33 @@
             var previous = GetPrevious(last);
             previous.next = null;
             last = previous;
+        }
+
+        /// <summary>
+        /// Return size of the linked list
+        /// </summary>
+        /// <returns></returns>
+        public int Size()
+        {
+            return count;
+        }
+
+        /// <summary>
+        /// Convert linked list into an array
+        /// </summary>
+        /// <returns></returns>
+        public int[] ToArray()
+        {
+            var array = new int[count];
+            var index = 0;
+            var temp = first;
+
+            while (temp != null) {
+                array[index++] = temp.value;
+                temp = temp.next;
+            }
+
+            return array;
         }
 
         /// <summary>

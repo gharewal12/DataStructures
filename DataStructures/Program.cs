@@ -35,6 +35,7 @@ Console.WriteLine("-----------Linked List------------");
 #region
 var ll = new LinkedListDs();
 ll.AddLast(10);
+Console.WriteLine("Size = " + ll.Size());
 ll.AddFirst(20);
 ll.AddFirst(30);
 ll.AddLast(40);
@@ -43,5 +44,7 @@ ll.RemoveFirst();
 ll.RemoveLast();
 Console.WriteLine("Index of 10 is " + ll.IndexOf(10));
 Console.WriteLine("Contains 30 " + ll.Contains(30));
+Console.WriteLine("Size = " + ll.Size());
+var arr = ll.ToArray();
 ll.Print();
 #endregion

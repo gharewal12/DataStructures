@@ -150,6 +150,26 @@
         }
 
         /// <summary>
+        /// Reverse the elements of linked list
+        /// </summary>
+        public void Reverse()
+        {
+            var previous = first;
+            var current = first.next;
+
+            while (current != null) {
+                var next = current.next;
+                current.next = previous;
+                previous = current;
+                current = next;
+            }
+
+            last = first;
+            last.next = null;
+            first = previous;
+        }
+
+        /// <summary>
         /// Print all items of linked list
         /// </summary>
         public void Print()

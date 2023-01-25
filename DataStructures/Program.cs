@@ -40,6 +40,7 @@ ll.AddFirst(20);
 ll.AddFirst(30);
 ll.AddLast(40);
 ll.AddLast(50);
+ll.Reverse();
 ll.RemoveFirst();
 ll.RemoveLast();
 Console.WriteLine("Index of 10 is " + ll.IndexOf(10));

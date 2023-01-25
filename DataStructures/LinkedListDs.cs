@@ -170,6 +170,37 @@
         }
 
         /// <summary>
+        /// Get kth node from end of linked list
+        /// </summary>
+        /// <param name="k"></param>
+        /// <returns></returns>
+        /// <exception cref="Exception"></exception>
+        public int GetKthNodeFromEnd(int k)
+        {
+            var temp1 = first;
+            var temp2 = first;
+
+            if (IsEmpty()) {
+                throw new Exception("Linked list is empty.");
+            }
+
+            while (k > 1) {
+                temp1 = temp1.next;
+                k--;
+                if (temp1 == null) {
+                    throw new Exception("k is greater that size of linked array.");
+                }
+            }
+
+            while (temp1 != last) {
+                temp1 = temp1.next;
+                temp2 = temp2.next;
+            }
+
+            return temp2.value;
+        }
+
+        /// <summary>
         /// Print all items of linked list
         /// </summary>
         public void Print()

@@ -34,12 +34,13 @@ Console.WriteLine("-----------Linked List------------");
 /* Linked Lists*/
 #region
 var ll = new LinkedListDs();
-ll.AddLast(10);
+ll.AddLast(30);
 Console.WriteLine("Size = " + ll.Size());
 ll.AddFirst(20);
-ll.AddFirst(30);
+ll.AddFirst(10);
 ll.AddLast(40);
 ll.AddLast(50);
+var kthValue = ll.GetKthNodeFromEnd(3);
 ll.Reverse();
 ll.RemoveFirst();
 ll.RemoveLast();

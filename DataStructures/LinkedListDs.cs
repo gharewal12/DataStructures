@@ -201,6 +201,55 @@
         }
 
         /// <summary>
+        /// Print the middle element of the linked list
+        /// </summary>
+        public void PrintMiddle()
+        {
+            if (IsEmpty()) {
+                throw new Exception("Empty list");
+            }
+            var a = first;
+            var b = first;
+
+            while (b != last && b.next != last) {
+                b = b.next.next;
+                a = a.next;
+            }
+
+            if (b == last) {
+                Console.WriteLine(a.value);
+            }
+            else {
+                Console.WriteLine(a.value + ", " + a.next.value);
+            }
+        }
+
+        /// <summary>
+        /// Detect if there is a loop in linked list
+        /// </summary>
+        /// <returns></returns>
+        /// <exception cref="Exception"></exception>
+        public bool HasLoop()
+        {
+            if (IsEmpty()) {
+                throw new Exception("Linked list is empty.");
+            }
+            var a = first;
+            var b = first;
+
+            while (b != last && b.next != last) {
+                b = b.next.next;
+                a = a.next;
+
+                if (a == b) {
+                    return true;
+                }
+            }
+
+            return false;
+        }
+
+        /// <summary>
         /// Print all items of linked list
         /// </summary>
         public void Print()

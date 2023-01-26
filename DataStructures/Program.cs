@@ -40,6 +40,9 @@ ll.AddFirst(20);
 ll.AddFirst(10);
 ll.AddLast(40);
 ll.AddLast(50);
+ll.AddLast(60);
+Console.Write("Middle element = ");
+ll.PrintMiddle();
 var kthValue = ll.GetKthNodeFromEnd(3);
 ll.Reverse();
 ll.RemoveFirst();
@@ -49,4 +52,5 @@ Console.WriteLine("Contains 30 " + ll.Contains(30));
 Console.WriteLine("Size = " + ll.Size());
 var arr = ll.ToArray();
 ll.Print();
+
 #endregion

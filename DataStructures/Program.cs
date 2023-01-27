@@ -64,5 +64,7 @@ string s = "abcd";
 var reverseString = StringReverser.Reverse(s);
 Console.WriteLine("Reversed string is " + reverseString);
 
-
+//Balanced Bracket
+var bracketExpression = "{([])}[)";
+Console.WriteLine("Bracket Balanced = " + Expression.IsBalancedBracket(bracketExpression));
 #endregion

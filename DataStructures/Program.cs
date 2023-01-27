@@ -6,7 +6,7 @@ Console.WriteLine("Hello, Welcome to Data Structures!");
 Console.WriteLine("--------------Arrays--------------");
 
 /* Arrays */
-#region
+#region Arrays
 var numbers = new ArrayDs<int>(4);
 numbers.Insert(10);
 numbers.Insert(20);
@@ -32,7 +32,7 @@ numbers.Print();
 Console.WriteLine("-----------Linked List------------");
 
 /* Linked Lists*/
-#region
+#region Linked Lists
 var ll = new LinkedListDs();
 ll.AddLast(30);
 Console.WriteLine("Size = " + ll.Size());
@@ -52,5 +52,17 @@ Console.WriteLine("Contains 30 " + ll.Contains(30));
 Console.WriteLine("Size = " + ll.Size());
 var arr = ll.ToArray();
 ll.Print();
+#endregion
+
+Console.WriteLine("---------------Stack--------------");
+
+/* Stack */
+#region Stack
+
+//Reverse the string using stack
+string s = "abcd";
+var reverseString = StringReverser.Reverse(s);
+Console.WriteLine("Reversed string is " + reverseString);
+
 
 #endregion

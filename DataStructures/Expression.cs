@@ -11,6 +11,9 @@
                     stk.Push(bracket);
                 }
                 else if (IsClosingBracket(bracket)) {
+                    if (!stk.Any()) {
+                        return false;
+                    }
                     var lastBracket = stk.Pop();
                     if (bracket != MatchingBracket(lastBracket)) {
                         return false;
@@ -18,7 +21,7 @@
                 }
             }
 
-            return true;
+            return !stk.Any();
         }
 
         private static bool IsOpeningBracket(string bracket)

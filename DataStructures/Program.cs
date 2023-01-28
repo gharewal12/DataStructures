@@ -67,4 +67,14 @@ Console.WriteLine("Reversed string is " + reverseString);
 //Balanced Bracket
 var bracketExpression = ")(";
 Console.WriteLine("Bracket Balanced = " + Expression.IsBalancedBracket(bracketExpression));
+
+//From Scratch
+var stk = new StackDs(5);
+stk.Push(10);
+stk.Push(20);
+stk.Push(30);
+var lastStackValue = stk.Pop();
+stk.Push(40);
+var peekValue = stk.Peek();
+Console.WriteLine("Stack is empty " + stk.IsEmpty());
 #endregion

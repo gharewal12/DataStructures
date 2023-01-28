@@ -1,6 +1,6 @@
 ﻿namespace DataStructures
 {
-    public static class Expression
+    public class Expression
     {
         public static bool IsBalancedBracket(string exp)
         {

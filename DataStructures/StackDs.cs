@@ -46,6 +46,9 @@ namespace DataStructures
         /// <returns></returns>
         public int Peek()
         {
+            if (IsEmpty()) {
+                throw new Exception("Stack is empty");
+            }
             return _stk[count - 1];
         }
 

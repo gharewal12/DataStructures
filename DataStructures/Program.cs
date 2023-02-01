@@ -77,4 +77,21 @@ var lastStackValue = stk.Pop();
 stk.Push(40);
 var peekValue = stk.Peek();
 Console.WriteLine("Stack is empty " + stk.IsEmpty());
+
+Console.WriteLine("----------Two Stack--------------");
+
+var twoStk = new TwoStacks(5);
+twoStk.Push1(10);
+twoStk.Push1(20);
+twoStk.Push1(30);
+twoStk.Push2(40);
+twoStk.Push2(50);
+var pop1 = twoStk.Pop1();
+var pop2 = twoStk.Pop1();
+var pop3 = twoStk.Pop1();
+var pop4 = twoStk.Pop2();
+var pop5 = twoStk.Pop2();
+Console.WriteLine();
+var pop6 = twoStk.Pop1();
+
 #endregion

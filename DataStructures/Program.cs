@@ -92,6 +92,15 @@ var pop3 = twoStk.Pop1();
 var pop4 = twoStk.Pop2();
 var pop5 = twoStk.Pop2();
 Console.WriteLine();
-var pop6 = twoStk.Pop1();
+
+Console.WriteLine("--------------Min Stack ------------");
+var minStk = new MinStack(5);
+minStk.Push(5);
+minStk.Push(2);
+minStk.Push(10);
+minStk.Push(1);
+Console.WriteLine("Min value = " + minStk.Min());
+minStk.Pop();
+Console.WriteLine("Min value = " + minStk.Min());
 
 #endregion

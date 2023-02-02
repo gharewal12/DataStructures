@@ -85,12 +85,12 @@ namespace DataStructures
 
         private bool IsFull1()
         {
-            return count1 >= count2;
+            return count1 == count2;
         }
 
         private bool IsFull2()
         {
-            return count2 >= count1;
+            return count2 == count1;
         }
     }
 }

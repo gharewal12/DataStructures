@@ -1,4 +1,5 @@
 ﻿using DataStructures;
+using System.Collections;
 using System.ComponentModel.DataAnnotations;
 
 Console.WriteLine("Hello, Welcome to Data Structures!");
@@ -103,4 +104,18 @@ Console.WriteLine("Min value = " + minStk.Min());
 minStk.Pop();
 Console.WriteLine("Min value = " + minStk.Min());
 
+#endregion
+
+Console.WriteLine("---------------Queue--------------");
+
+/* Queue */
+#region Queue
+
+// Reverse Queue
+var queue1 = new Queue();
+queue1.Enqueue(10);
+queue1.Enqueue(20);
+queue1.Enqueue(30);
+var reverseQueue = ReverseQueue.Reverse(queue1);
+Console.WriteLine("");
 #endregion

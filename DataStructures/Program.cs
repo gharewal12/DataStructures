@@ -119,3 +119,20 @@ queue1.Enqueue(30);
 var reverseQueue = ReverseQueue.Reverse(queue1);
 Console.WriteLine("");
 #endregion
+
+Console.WriteLine("-----------Array Queue------------");
+/* Array Queue */
+#region ArrayQueue
+var arrQ = new ArrayQueue(5);
+arrQ.Enqueue(10);
+arrQ.Enqueue(20);
+arrQ.Enqueue(30);
+arrQ.Enqueue(40);
+arrQ.Dequeue();
+arrQ.Dequeue();
+var first = arrQ.Peek();
+arrQ.Enqueue(50);
+arrQ.Enqueue(60);
+arrQ.Enqueue(70);
+Console.WriteLine("");
+#endregion

@@ -136,3 +136,17 @@ arrQ.Enqueue(60);
 arrQ.Enqueue(70);
 Console.WriteLine("");
 #endregion
+
+Console.WriteLine("-----------Stack Queue------------");
+/* Stack Queue */
+#region Stack Queue
+var stkQueue = new StackQueue();
+stkQueue.Enqueue(100);
+stkQueue.Enqueue(200);
+stkQueue.Enqueue(300);
+stkQueue.Enqueue(400);
+var top1 = stkQueue.Dequeue();
+var top2 = stkQueue.Dequeue();
+var top3 = stkQueue.Dequeue();
+Console.WriteLine("");
+#endregion

@@ -150,3 +150,20 @@ var top2 = stkQueue.Dequeue();
 var top3 = stkQueue.Dequeue();
 Console.WriteLine("");
 #endregion
+
+Console.WriteLine("-----------Priority Queue------------");
+/* Priority Queue */
+#region Priority Queue
+var prQueue = new PriorityQueue(5);
+prQueue.Enqueue(10);
+prQueue.Enqueue(50);
+prQueue.Enqueue(30);
+prQueue.Enqueue(20);
+prQueue.Enqueue(40);
+var prPop1 = prQueue.Dequeue();
+var prPop2 = prQueue.Dequeue();
+var prPop3 = prQueue.Dequeue();
+var prPop4 = prQueue.Dequeue();
+var prPop5 = prQueue.Dequeue();
+Console.WriteLine("");
+#endregion

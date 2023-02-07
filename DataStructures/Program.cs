@@ -135,6 +135,7 @@ arrQ.Enqueue(50);
 arrQ.Enqueue(60);
 arrQ.Enqueue(70);
 Console.WriteLine("");
+arrQ.Reverse(3);
 #endregion
 
 Console.WriteLine("-----------Stack Queue------------");

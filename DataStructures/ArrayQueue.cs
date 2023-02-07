@@ -60,6 +60,29 @@
         }
 
         /// <summary>
+        /// Reverse the first k elements of the queue
+        /// </summary>
+        /// <param name="k"></param>
+        public void Reverse(int k)
+        {
+            var temp = new Stack<int>();
+            var index = front;
+
+            for (int i = 0; i < k; i++) {
+                temp.Push(items[index]);
+                index = (index + 1) % items.Length;
+            }
+
+            index = front;
+
+            while (k > 0) {
+                items[index] = temp.Pop();
+                index = (index + 1) % items.Length;
+                k--;
+            }
+        }
+
+        /// <summary>
         /// To check if queue is full
         /// </summary>
         /// <returns></returns>

@@ -168,3 +168,18 @@ var prPop4 = prQueue.Dequeue();
 var prPop5 = prQueue.Dequeue();
 Console.WriteLine("");
 #endregion
+
+Console.WriteLine("----------LinkedList Queue------------");
+#region Linked List Queue
+var llQueue = new LinkedListQueue();
+llQueue.Enqueue(10);
+llQueue.Enqueue(20);
+llQueue.Enqueue(30);
+llQueue.Enqueue(40);
+var lstLlEle = llQueue.Peek();
+var lstLlEle1 = llQueue.Dequeue();
+var lstElePeek = llQueue.Peek();
+var lstLlEle2 = llQueue.Dequeue();
+Console.WriteLine("Size of ll Queue is " + llQueue.Size());
+Console.WriteLine("IsEmpty value of ll Queue is " + llQueue.IsEmpty());
+#endregion

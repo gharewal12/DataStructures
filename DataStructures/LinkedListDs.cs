@@ -266,9 +266,18 @@
         /// To check if linked list is empty
         /// </summary>
         /// <returns></returns>
-        private bool IsEmpty()
+        public bool IsEmpty()
         {
             return first == null;
+        }
+
+        /// <summary>
+        /// Return value of last node
+        /// </summary>
+        /// <returns></returns>
+        public int GetLastNodeValue()
+        {
+            return last.value;
         }
 
         /// <summary>

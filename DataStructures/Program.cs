@@ -183,3 +183,14 @@ var lstLlEle2 = llQueue.Dequeue();
 Console.WriteLine("Size of ll Queue is " + llQueue.Size());
 Console.WriteLine("IsEmpty value of ll Queue is " + llQueue.IsEmpty());
 #endregion
+
+Console.WriteLine("----------StackWithTwoQueues------------");
+#region StackWithTwoQueues
+var stkWithQ = new StackWithTwoQueues();
+stkWithQ.Push(10);
+stkWithQ.Push(20);
+stkWithQ.Push(30);
+stkWithQ.Push(40);
+var popstk1 = stkWithQ.Pop();
+Console.WriteLine("");
+#endregion

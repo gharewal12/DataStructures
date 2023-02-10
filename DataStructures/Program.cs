@@ -152,7 +152,7 @@ var top3 = stkQueue.Dequeue();
 Console.WriteLine("");
 #endregion
 
-Console.WriteLine("-----------Priority Queue------------");
+Console.WriteLine("-----------Priority Queue----------");
 /* Priority Queue */
 #region Priority Queue
 var prQueue = new PriorityQueue(5);
@@ -169,7 +169,7 @@ var prPop5 = prQueue.Dequeue();
 Console.WriteLine("");
 #endregion
 
-Console.WriteLine("----------LinkedList Queue------------");
+Console.WriteLine("----------LinkedList Queue----------");
 #region Linked List Queue
 var llQueue = new LinkedListQueue();
 llQueue.Enqueue(10);
@@ -184,7 +184,7 @@ Console.WriteLine("Size of ll Queue is " + llQueue.Size());
 Console.WriteLine("IsEmpty value of ll Queue is " + llQueue.IsEmpty());
 #endregion
 
-Console.WriteLine("----------StackWithTwoQueues------------");
+Console.WriteLine("----------StackWithTwoQueues---------");
 #region StackWithTwoQueues
 var stkWithQ = new StackWithTwoQueues();
 stkWithQ.Push(10);
@@ -193,4 +193,12 @@ stkWithQ.Push(30);
 stkWithQ.Push(40);
 var popstk1 = stkWithQ.Pop();
 Console.WriteLine("");
+#endregion
+
+Console.WriteLine("----First Non-Repeatitve Character Question (Dictionary)-----");
+#region Non Repeating Character Question
+var dummyString = "a mercedes car";
+var charFinder = new CharFinder();
+var nonRepitiveChar = charFinder.FindFirstNonRepatingChar(dummyString);
+Console.WriteLine("First non repititive char is " + nonRepitiveChar);
 #endregion

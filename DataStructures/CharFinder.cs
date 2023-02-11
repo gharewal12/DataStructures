@@ -18,5 +18,21 @@
 
             return dict.Where(x => x.Value == 1).FirstOrDefault().Key.ToString();
         }
+
+        public string FirstRepeatedCharacter(string str)
+        {
+            var hash = new HashSet<char>();
+
+            foreach (var item in str) {
+                if (hash.Contains(item)) {
+                    return item.ToString();
+                }
+                else {
+                    hash.Add(item);
+                }
+            }
+
+            return "No repeated characters found";
+        }
     }
 }

@@ -1,6 +1,5 @@
 ﻿using DataStructures;
 using System.Collections;
-using System.ComponentModel.DataAnnotations;
 
 Console.WriteLine("Hello, Welcome to Data Structures!");
 
@@ -201,4 +200,12 @@ var dummyString = "a mercedes car";
 var charFinder = new CharFinder();
 var nonRepitiveChar = charFinder.FindFirstNonRepatingChar(dummyString);
 Console.WriteLine("First non repititive char is " + nonRepitiveChar);
+#endregion
+
+Console.WriteLine("----First Repeatitve Character Question (HashSet)-----");
+#region First Repeating Character Question
+var dummyString1 = "green apple";
+var charFinder1 = new CharFinder();
+var repitiveChar = charFinder1.FirstRepeatedCharacter(dummyString1);
+Console.WriteLine("First repititive char is " + repitiveChar);
 #endregion

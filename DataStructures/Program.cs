@@ -209,3 +209,23 @@ var charFinder1 = new CharFinder();
 var repitiveChar = charFinder1.FirstRepeatedCharacter(dummyString1);
 Console.WriteLine("First repititive char is " + repitiveChar);
 #endregion
+
+Console.WriteLine("---------------Hash Table------------");
+/* Hash Table */
+#region Hash Table
+var hst = new HashTableDs(5);
+hst.Put(1, "first");
+hst.Put(1, "first updated");
+hst.Put(11, "second");
+hst.Remove(11);
+hst.Put(16, "third");
+hst.Put(2, "fourth");
+hst.Put(12, "fifth");
+hst.Put(17, "sixth");
+hst.Remove(17);
+var hst1 = hst.Get(1);
+var hst2 = hst.Get(2);
+var hst22 = hst.Get(12);
+var hst23 = hst.Get(21);
+Console.WriteLine("");
+#endregion

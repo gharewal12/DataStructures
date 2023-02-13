@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace DataStructures
+﻿namespace DataStructures
 {
     public class HashTableDs
     {
@@ -20,7 +14,6 @@ namespace DataStructures
         }
 
         private LinkedList<KeyValuePair>[] items;
-        private int count;
 
         public HashTableDs(int size)
         {
@@ -29,33 +22,47 @@ namespace DataStructures
 
         public void Put(int key, string value)
         {
-            var index = Hash(key);
+            var entry = GetEntry(key);
 
-            if (items[index] == null) {
-                items[index] = new LinkedList<KeyValuePair>();
+            if (entry != null) {
+                entry._value = value;
+                return;
             }
 
-            var entries = items[index];
-
-            foreach (var item in entries) {
-                if (item._key == key) {
-                    item._value = value;
-                    return;
-                }
-            }
-
-            entries.AddLast(new KeyValuePair(key, value));
+            GetOrCreateEntry(key).AddLast(new KeyValuePair(key, value));
         }
 
         public string Get(int key)
         {
-            var index = Hash(key);
-            var entries = items[index];
+            var entry = GetEntry(key);
+
+            return entry == null ? null : entry._value;
+        }
+
+        public void Remove(int key)
+        {
+            var entry = GetEntry(key);
+
+            if (entry == null) {
+                throw new Exception("Empty hash table");
+            }
+
+            GetEntries(key).Remove(entry);
+        }
+
+        private int Hash(int key)
+        {
+            return key % items.Length;
+        }
+
+        private KeyValuePair GetEntry(int key)
+        {
+            var entries = GetEntries(key);
 
             if (entries != null) {
                 foreach (var item in entries) {
                     if (item._key == key) {
-                        return item._value;
+                        return item;
                     }
                 }
             }
@@ -63,28 +70,20 @@ namespace DataStructures
             return null;
         }
 
-        public void Remove(int key)
+        private LinkedList<KeyValuePair> GetEntries(int key)
+        {
+            return items[Hash(key)];
+        }
+
+        private LinkedList<KeyValuePair> GetOrCreateEntry(int key)
         {
             var index = Hash(key);
             var entries = items[index];
-
             if (entries == null) {
-                throw new Exception("Entry not found");
+                items[index] = new LinkedList<KeyValuePair>();
             }
 
-            foreach (var item in entries) {
-                if (item._key == key) {
-                    entries.Remove(item);
-                    return;
-                }
-            }
-
-            throw new Exception("Entry not found");
-        }
-
-        private int Hash(int key)
-        {
-            return key % items.Length;
+            return items[index];
         }
     }
 }

@@ -228,4 +228,9 @@ var hst2 = hst.Get(2);
 var hst22 = hst.Get(12);
 var hst23 = hst.Get(21);
 Console.WriteLine("");
+
+
+Console.WriteLine("---------------Hash Table Exercise------------");
+var hstExer = new HashTableExercises();
+Console.WriteLine("Most Frequent no is " + hstExer.MostFrequent(new int[7] { 1, 2, 2, 3, 4, 4, 4 }));
 #endregion

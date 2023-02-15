@@ -233,4 +233,5 @@ Console.WriteLine("");
 Console.WriteLine("---------------Hash Table Exercise------------");
 var hstExer = new HashTableExercises();
 Console.WriteLine("Most Frequent no is " + hstExer.MostFrequent(new int[7] { 1, 2, 2, 3, 4, 4, 4 }));
+Console.WriteLine("Total unique pairs is " + hstExer.CountPairsWithDiff(new int[7] { 1, 7, 5, 9, 2, 12, 3 }, 2));
 #endregion

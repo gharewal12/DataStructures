@@ -234,4 +234,7 @@ Console.WriteLine("---------------Hash Table Exercise------------");
 var hstExer = new HashTableExercises();
 Console.WriteLine("Most Frequent no is " + hstExer.MostFrequent(new int[7] { 1, 2, 2, 3, 4, 4, 4 }));
 Console.WriteLine("Total unique pairs is " + hstExer.CountPairsWithDiff(new int[7] { 1, 7, 5, 9, 2, 12, 3 }, 2));
+var twoSumResult = hstExer.TwoSum(new int[4] { 2, 7, 11, 15 }, 18);
+Console.WriteLine("Two Sum indices are");
+twoSumResult.ToList().ForEach(x => Console.Write(x + " "));
 #endregion

@@ -63,5 +63,29 @@
 
             return count;
         }
+
+        public int[] TwoSum(int[] items, int target)
+        {
+            var result = new HashSet<int>();
+
+            var dict = new Dictionary<int, int>();
+
+            for (int i = 0; i < items.Length; i++) {
+
+                dict.Add(items[i], i);
+            }
+
+            foreach (var item in items) {
+                if (dict.ContainsKey(target - item) && dict[target - item] != -1) {
+                    result.Add(dict[item]);
+                    result.Add(dict[target - item]);
+                    dict[target - item] = -1;
+                    break;
+                }
+                dict[item] = -1;
+            }
+
+            return result.ToArray();
+        }
     }
 }

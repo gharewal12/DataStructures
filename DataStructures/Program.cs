@@ -238,3 +238,14 @@ var twoSumResult = hstExer.TwoSum(new int[4] { 2, 7, 11, 15 }, 18);
 Console.WriteLine("Two Sum indices are");
 twoSumResult.ToList().ForEach(x => Console.Write(x + " "));
 #endregion
+
+Console.WriteLine("---------------Binary Tree------------");
+/* Binary Tree */
+#region BinaryTree
+var bt = new BinaryTree();
+bt.Insert(5);
+bt.Insert(3);
+bt.Insert(6);
+bt.Insert(1);
+Console.WriteLine("");
+#endregion

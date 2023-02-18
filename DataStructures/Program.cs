@@ -247,5 +247,8 @@ bt.Insert(5);
 bt.Insert(3);
 bt.Insert(6);
 bt.Insert(1);
+var btFind1 = bt.Find(1);
+var btFind6 = bt.Find(6);
+var btFind11 = bt.Find(11);
 Console.WriteLine("");
 #endregion

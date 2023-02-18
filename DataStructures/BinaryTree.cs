@@ -26,6 +26,11 @@
             InsertNode(value, root);
         }
 
+        public bool Find(int value)
+        {
+            return FindValue(value, root);
+        }
+
         private Node InsertNode(int value, Node node)
         {
             if (root == null) {
@@ -47,6 +52,30 @@
 
             }
             return node;
+        }
+
+        private bool FindValue(int value, Node node)
+        {
+            if (root == null) {
+                throw new Exception("Tree is empty");
+            }
+
+            if (node == null) {
+                return false;
+            }
+
+            if (value == node.value) {
+                return true;
+            }
+
+            if (value < node.value) {
+                return FindValue(value, node.left);
+            }
+            else if (value > node.value) {
+                return FindValue(value, node.right);
+            }
+
+            return false;
         }
     }
 }

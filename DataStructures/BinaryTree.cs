@@ -31,6 +31,54 @@
             return FindValue(value, root);
         }
 
+        public void TraversePreOrder()
+        {
+            TraversePreOrder(root);
+        }
+
+        public void InOrderTraverse()
+        {
+            InOrderTraverse(root);
+        }
+
+        public void PostOrderTraverse()
+        {
+            PostOrderTraverse(root);
+        }
+
+        private void TraversePreOrder(Node root)
+        {
+            if (root == null) {
+                return;
+            }
+
+            Console.WriteLine(root.value);
+            TraversePreOrder(root.left);
+            TraversePreOrder(root.right);
+        }
+
+        private void InOrderTraverse(Node root)
+        {
+            if (root == null) {
+                return;
+            }
+
+            InOrderTraverse(root.left);
+            Console.WriteLine(root.value);
+            InOrderTraverse(root.right);
+        }
+
+        private void PostOrderTraverse(Node root)
+        {
+            if (root == null) {
+                return;
+            }
+
+            PostOrderTraverse(root.left);
+            PostOrderTraverse(root.right);
+            Console.WriteLine(root.value);
+        }
+
         private Node InsertNode(int value, Node node)
         {
             if (root == null) {

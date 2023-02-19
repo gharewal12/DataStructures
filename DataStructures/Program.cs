@@ -243,12 +243,21 @@ Console.WriteLine("---------------Binary Tree------------");
 /* Binary Tree */
 #region BinaryTree
 var bt = new BinaryTree();
-bt.Insert(5);
-bt.Insert(3);
-bt.Insert(6);
+bt.Insert(7);
+bt.Insert(4);
+bt.Insert(9);
 bt.Insert(1);
+bt.Insert(6);
+bt.Insert(8);
+bt.Insert(10);
 var btFind1 = bt.Find(1);
 var btFind6 = bt.Find(6);
 var btFind11 = bt.Find(11);
+Console.WriteLine(" Pre Order Traversal");
+bt.TraversePreOrder();
+Console.WriteLine(" In Order Traversal");
+bt.InOrderTraverse();
+Console.WriteLine(" Post Order Traversal");
+bt.PostOrderTraverse();
 Console.WriteLine("");
 #endregion

@@ -259,5 +259,7 @@ Console.WriteLine(" In Order Traversal");
 bt.InOrderTraverse();
 Console.WriteLine(" Post Order Traversal");
 bt.PostOrderTraverse();
+Console.WriteLine("Height of tree is " + bt.Height());
+Console.WriteLine("Minimum value of tree is " + bt.Min());
 Console.WriteLine("");
 #endregion

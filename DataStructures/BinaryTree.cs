@@ -46,6 +46,16 @@
             PostOrderTraverse(root);
         }
 
+        public int Height()
+        {
+            return Height(root);
+        }
+
+        public int Min()
+        {
+            return Min(root);
+        }
+
         private void TraversePreOrder(Node root)
         {
             if (root == null) {
@@ -124,6 +134,36 @@
             }
 
             return false;
+        }
+
+        private int Height(Node root)
+        {
+            if (root == null) {
+                return -1;
+            }
+
+            if (IsLeafNode(root)) {
+                return 0;
+            }
+
+            return 1 + Math.Max(Height(root.left), Height(root.right));
+        }
+
+        private int Min(Node root)
+        {
+            if (IsLeafNode(root)) {
+                return root.value;
+            }
+
+            var left = Min(root.left);
+            var right = Min(root.right);
+
+            return Math.Min(Math.Min(left, right), root.value);
+        }
+
+        private bool IsLeafNode(Node node)
+        {
+            return node.left == null && node.right == null;
         }
     }
 }

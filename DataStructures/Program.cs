@@ -261,5 +261,14 @@ Console.WriteLine(" Post Order Traversal");
 bt.PostOrderTraverse();
 Console.WriteLine("Height of tree is " + bt.Height());
 Console.WriteLine("Minimum value of tree is " + bt.Min());
+var bt2 = new BinaryTree();
+bt2.Insert(7);
+bt2.Insert(4);
+bt2.Insert(9);
+bt2.Insert(1);
+bt2.Insert(6);
+bt2.Insert(8);
+bt2.Insert(10);
+Console.WriteLine(" B1 equals B2 = " + bt.Equals(bt2));
 Console.WriteLine("");
 #endregion

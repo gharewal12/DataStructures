@@ -56,6 +56,15 @@
             return Min(root);
         }
 
+        public bool Equals(BinaryTree tree)
+        {
+            if (tree == null) {
+                return false;
+            }
+
+            return Equals(root, tree.root);
+        }
+
         private void TraversePreOrder(Node root)
         {
             if (root == null) {
@@ -159,6 +168,19 @@
             var right = Min(root.right);
 
             return Math.Min(Math.Min(left, right), root.value);
+        }
+
+        private bool Equals(Node first, Node second)
+        {
+            if (first == null && second == null) {
+                return true;
+            }
+
+            if (first != null && second != null) {
+                return first.value == second.value && Equals(first.left, second.left) && Equals(first.right, second.right);
+            }
+
+            return false;
         }
 
         private bool IsLeafNode(Node node)
